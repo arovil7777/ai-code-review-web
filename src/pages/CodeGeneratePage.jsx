@@ -25,14 +25,8 @@ const CodeGeneratePage = () => {
         }
     };
 
-    const handleKeyDown = (event) => {
-        if (event.key === "Enter" && !loading) {
-            handleGenerate();
-        } 
-    }
-
     return (
-        <div onKeyDown={handleKeyDown} tabIndex={0} style={{ outline: "none" }}>
+        <div>
             <h1>코드 생성</h1>
             <CodeEditor code={prompt} setCode={setPrompt} placeholder="설명을 입력하세요" />
             <button onClick={handleGenerate} style={{ marginTop: "10px", padding: "10px 20px", background: "#007bff", color: "#fff", border: "none", borderRadius: "5px" }}>
